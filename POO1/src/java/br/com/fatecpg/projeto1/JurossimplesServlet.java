@@ -45,6 +45,25 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
             out.println("<body>");
+            out.println("<nav class=\"navbar navbar-default\">");
+            out.println("<div class=\"container-fluid\">");
+            out.println("<div class=\"navbar-header\">");
+            out.println("<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">");
+            out.println("<span class=\"sr-only\">Toggle navigation</span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("</button>");
+            out.println("<a class=\"navbar-brand\" href=\"home.html\">POO</a>");
+            out.println("</div>");
+            out.println("<div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">");
+            out.println("<ul class=\"nav navbar-nav\">");
+            out.println("<li class=\"active\"><a href=\"juros-simples.html\">Juros Simples</a></li>");
+            out.println("<li><a href=\"juros-composto.html\">Juros Composto</a></li>");
+            out.println("</ul>");
+            out.println("</div>");
+            out.println("</div>");
+            out.println("</nav>");
             
             
                float c = 0;
