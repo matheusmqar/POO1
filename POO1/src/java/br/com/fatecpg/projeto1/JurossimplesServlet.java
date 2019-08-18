@@ -7,6 +7,7 @@ package br.com.fatecpg.projeto1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,6 +45,25 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
             out.println("<body>");
+            
+            
+               float c = 0;
+                try{ c = Float.parseFloat(request.getParameter("c"));
+                }catch(Exception ex){}
+                
+               float t = 0;
+                try{ t = Float.parseFloat(request.getParameter("t"));
+                }catch(Exception ex){}
+               
+               DecimalFormat cj = new DecimalFormat("#.00"); 
+               DecimalFormat cm = new DecimalFormat("#.00");
+               
+               int n = 0;
+                try{ n = Integer.parseInt(request.getParameter("n"));
+                }catch(Exception ex){}
+                Float j = c*( +(t*n));
+                Float m = j/100 + c;
+                
             out.println("<div class=\"container-fluid\">");
             out.println("<h2 align=\"center\">JUROS SIMPLES</h2>");
             out.println("</br>");
@@ -53,25 +73,25 @@ public class JurossimplesServlet extends HttpServlet {
            
            out.println("<div class=\"form-group col-md-4\">");
            out.println("<label for=\"capitalLabel\">Capital (R$)</label>");
-           out.println("<input type=\"number\" class=\"form-control\" id=\"capitalLabel\" placeholder=\"Digite o capital aplicado.\">");
+           out.println("<input type=\"number\" name=\"c\" class=\"form-control\" id=\"capitalLabel\" placeholder=\"Digite o capital aplicado.\">");
            out.println("</div>");
            
            out.println("<div class=\"form-group col-md-4\">");
            out.println("<label for=\"jurosLabel\">Taxa de Juros (%)</label>");
-           out.println("<input type=\"number\" class=\"form-control\" id=\"jurosLabel\" placeholder=\"Digite a quantidade de juros.\">");
+           out.println("<input type=\"number\" name=\"t\" class=\"form-control\" id=\"jurosLabel\" placeholder=\"Digite a quantidade de juros.\">");
            out.println("</div>");
            
            out.println("<div class=\"form-group col-md-4\">");
            out.println("<label for=\"mesesLabel\">Quantidade de meses</label>");
-           out.println("<input type=\"number\" class=\"form-control\" id=\"mesesLabel\" placeholder=\"Digite a quantidade de meses.\">");
+           out.println("<input type=\"number\" name=\"n\" class=\"form-control\" id=\"mesesLabel\"  placeholder=\"Digite a quantidade de meses.\">");
            out.println("</div>");
            
-           out.println("<div class=\"row\">");
-           out.println("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=\"btn btn-primary\" href=\"#\" role=\"button\">CALCULAR</a>");
-           out.println("</div>");
+           out.println("<div margin-left:30px;");
            
-           out.println("<h3>Juros Total (R$) :</h3>");
-           out.println("<h3>Montante Total(R$):</h3>");
+
+           out.println("<p><input class=\"btn btn-primary\" type='submit' value='CALCULAR'/>");
+           
+           out.println("</div>");
            
            out.println("</form>");
            
