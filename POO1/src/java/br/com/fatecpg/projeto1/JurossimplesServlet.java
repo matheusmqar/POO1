@@ -93,6 +93,10 @@ public class JurossimplesServlet extends HttpServlet {
            
            out.println("</div>");
            
+            out.println("<h3>Juros Total (R$): " + cj.format(j/100) + "</h3>");
+            out.println("<h3>Montante Total (R$): " + cm.format(m) + "</h3>");
+           
+           
            out.println("</form>");
            
            
