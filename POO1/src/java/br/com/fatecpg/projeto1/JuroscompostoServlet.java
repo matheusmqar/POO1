@@ -47,6 +47,7 @@ public class JuroscompostoServlet extends HttpServlet {
             out.println("<style>");
             out.println("table,th,td{border:1px solid black;}");
             out.println("</style>");
+            
             try {
                 
                 double cap,tax,montante,juroscomp, ganho;
