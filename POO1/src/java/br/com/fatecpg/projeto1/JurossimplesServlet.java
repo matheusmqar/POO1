@@ -37,10 +37,21 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet JurossimplesServlet</title>");            
+            out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");  
+            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+            out.println("<title>Juros Simples</title>");
+            out.println(" <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" integrity=\"sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu\" crossorigin=\"anonymous\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet JurossimplesServlet at " + request.getContextPath() + "</h1>");
+            out.println("<div class=\"container-fluid\">");
+            out.println("<div class=\"col-md-9\">");
+            out.println("<h2>Calculo Juros Simples</h2>");
+           
+            out.println("");
+            out.println("<div/>");
+            out.println("<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\" integrity=\"sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ\" crossorigin=\"anonymous\"></script>");
+            out.println("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\" integrity=\"sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd\" crossorigin=\"anonymous\"></script>");
+            out.println("<div/>");
             out.println("</body>");
             out.println("</html>");
         }
