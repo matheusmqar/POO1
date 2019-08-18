@@ -34,13 +34,57 @@ public class JuroscompostoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+            
+            
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet JuroscompostoServlet</title>");            
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet JuroscompostoServlet at " + request.getContextPath() + "</h1>");
+            out.println("<body>") ;
+            out.println("<style>");
+            out.println("table,th,td{border:1px solid black;}");
+            out.println("</style>");
+            try {
+                
+                double cap,tax,montante,juroscomp, ganho;
+                int time,i,control;
+          
+                
+                
+                
+            
+                cap = Double.parseDouble(request.getParameter("capital"));
+                tax = Double.parseDouble(request.getParameter("taxa"))/100;
+                time = Integer.parseInt(request.getParameter("tempo"));
+                control=0;
+                
+                out.println("<table>");
+                out.println("<tr>");
+                    out.println("<th>Montante acumulado:</th>");
+                out.println("</tr>");
+                
+                for ( i = 1; i <= time; i++) {
+                    out.println("<tr>");
+                montante =cap*Math.pow((1+tax),control);
+                juroscomp = montante - cap;
+                ganho = cap + juroscomp;
+                out.println("<td>"+ganho+"</td>");
+                    out.println("</tr>");
+                
+                cap=ganho;
+                control = control + 1;
+                }
+                
+                out.println("</table>");
+
+            } catch (Exception e) {
+                out.println("<h1> Erro: " + e.getMessage() + "</h1>");
+            }
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
