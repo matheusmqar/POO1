@@ -40,13 +40,44 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");  
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             out.println("<title>Juros Simples</title>");
-            out.println(" <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" integrity=\"sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu\" crossorigin=\"anonymous\">");
+            out.println("<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" integrity=\"sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu\" crossorigin=\"anonymous\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<div class=\"container-fluid\">");
-            out.println("<div class=\"col-md-12\" align=\"center\">");
-            out.println("<h2>Calculo Juros Simples</h2>");
-            out.println("");
+            out.println("<h2 align=\"center\">JUROS SIMPLES</h2>");
+            out.println("</br>");
+            
+           
+           out.println("<form>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"capitalLabel\">Capital (R$)</label>");
+           out.println("<input type=\"number\" class=\"form-control\" id=\"capitalLabel\" placeholder=\"Digite o capital aplicado.\">");
+           out.println("</div>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"jurosLabel\">Taxa de Juros (%)</label>");
+           out.println("<input type=\"number\" class=\"form-control\" id=\"jurosLabel\" placeholder=\"Digite a quantidade de juros.\">");
+           out.println("</div>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"mesesLabel\">Quantidade de meses</label>");
+           out.println("<input type=\"number\" class=\"form-control\" id=\"mesesLabel\" placeholder=\"Digite a quantidade de meses.\">");
+           out.println("</div>");
+           
+           out.println("<div class=\"row\">");
+           out.println("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=\"btn btn-primary\" href=\"#\" role=\"button\">CALCULAR</a>");
+           out.println("</div>");
+           
+           out.println("<h3>Juros Total (R$) :</h3>");
+           out.println("<h3>Montante Total(R$):</h3>");
+           
+           out.println("</form>");
+           
+           
+           
+            
             out.println("<div/>");
             out.println("<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\" integrity=\"sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ\" crossorigin=\"anonymous\"></script>");
             out.println("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\" integrity=\"sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd\" crossorigin=\"anonymous\"></script>");
