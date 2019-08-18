@@ -44,9 +44,8 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<div class=\"container-fluid\">");
-            out.println("<div class=\"col-md-9\">");
+            out.println("<div class=\"col-md-12\" align=\"center\">");
             out.println("<h2>Calculo Juros Simples</h2>");
-           
             out.println("");
             out.println("<div/>");
             out.println("<script src=\"https://code.jquery.com/jquery-1.12.4.min.js\" integrity=\"sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ\" crossorigin=\"anonymous\"></script>");
