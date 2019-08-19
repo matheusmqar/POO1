@@ -43,15 +43,64 @@ public class JuroscompostoServlet extends HttpServlet {
             out.println("<head>");
             out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");  
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-            out.println("<title>Juros Simples</title>");
+            out.println("<title>Juros Compósto</title>");
             out.println("<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" integrity=\"sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu\" crossorigin=\"anonymous\">");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
             out.println("<body>") ;
-            out.println("<style>");
-            out.println("table,th,td{border:1px solid black;}");
-            out.println("</style>");
+            //Navbar
+            out.println("<nav class=\"navbar navbar-default\">");
+            out.println("<div class=\"container-fluid\">");
+            out.println("<div class=\"navbar-header\">");
+            out.println("<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">");
+            out.println("<span class=\"sr-only\">Toggle navigation</span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("<span class=\"icon-bar\"></span>");
+            out.println("</button>");
+            out.println("<a class=\"navbar-brand\" href=\"home.html\">POO</a>");
+            out.println("</div>");
+            out.println("<div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">");
+            out.println("<ul class=\"nav navbar-nav\">");
+            out.println("<li class=\"active\"><a href=\"juros-simples.html\">Juros Simples</a></li>");
+            out.println("<li><a href=\"juros-composto.html\">Juros Composto</a></li>");
+            out.println("</ul>");
+            out.println("</div>");
+            out.println("</div>");
+            out.println("</nav>");
+
+            out.println("<div class=\"container-fluid\">");
+            out.println("<h2 align=\"center\">JUROS COMPOSTO</h2>");
+            out.println("</br>");
             
+           
+           out.println("<form>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"capitalLabel\">Capital (R$)</label>");
+           out.println("<input type=\"number\" name=\"capital\" class=\"form-control\" id=\"capitalLabel\" placeholder=\"Digite o capital aplicado.\">");
+           out.println("</div>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"jurosLabel\">Taxa de Juros (%)</label>");
+           out.println("<input type=\"number\" name=\"taxa\" class=\"form-control\" id=\"jurosLabel\" placeholder=\"Digite a quantidade de juros.\">");
+           out.println("</div>");
+           
+           out.println("<div class=\"form-group col-md-4\">");
+           out.println("<label for=\"mesesLabel\">Quantidade de meses</label>");
+           out.println("<input type=\"number\" name=\"tempo\" class=\"form-control\" id=\"mesesLabel\"  placeholder=\"Digite a quantidade de meses.\">");
+           out.println("</div>");
+           
+           out.println("<div margin-left:30px;");
+           
+
+           out.println("<p><input class=\"btn btn-primary\" type='submit' value='CALCULAR'/>");
+           
+           
+           
+           out.println("</div>");
+           
+           out.println("<div style='margin-top:5%; margin-left:30%'>");
             try {
                 
                 double cap,tax,montante,juroscomp, ganho;
@@ -86,9 +135,18 @@ public class JuroscompostoServlet extends HttpServlet {
                 out.println("</table>");
 
             } catch (Exception e) {
-                out.println("<h1> Erro: " + e.getMessage() + "</h1>");
             }
 
+            out.println("</div>");
+            
+            
+            
+            out.println("<style>");
+            out.println("table,th,td{border:1px solid black;}");
+            out.println("</style>");
+            
+            out.println("</form>");
+            
             out.println("</body>");
             out.println("</html>");
         }

@@ -45,6 +45,7 @@ public class JurossimplesServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
             out.println("<body>");
+            //Navbar
             out.println("<nav class=\"navbar navbar-default\">");
             out.println("<div class=\"container-fluid\">");
             out.println("<div class=\"navbar-header\">");
