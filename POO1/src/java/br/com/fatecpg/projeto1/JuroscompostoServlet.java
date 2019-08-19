@@ -43,7 +43,7 @@ public class JuroscompostoServlet extends HttpServlet {
             out.println("<head>");
             out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");  
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-            out.println("<title>Juros Compósto</title>");
+            out.println("<title>Juros Composto</title>");
             out.println("<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" integrity=\"sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu\" crossorigin=\"anonymous\">");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">");
             out.println("</head>");
@@ -106,28 +106,37 @@ public class JuroscompostoServlet extends HttpServlet {
                 double cap,tax,montante,juroscomp, ganho;
                 int time,i,control;
           
-                
-                
-                
-            
+           
                 cap = Double.parseDouble(request.getParameter("capital"));
                 tax = Double.parseDouble(request.getParameter("taxa"))/100;
                 time = Integer.parseInt(request.getParameter("tempo"));
                 control=0;
-                
+   
                 out.println("<table>");
-                out.println("<tr>");
-                    out.println("<th>Montante acumulado:</th>");
-                out.println("</tr>");
+                out.println("<td>");
+                out.println("<font size='5px'>"+"Mês: "+"</font>");
+                out.println("</td>");
+                out.println("<td>");
+                out.println("<font size='5px'>"+"Capital:"+"</font>");
+                out.println("</td>");
+                out.println("<td>");
+                out.println("<font size='5px'>"+"Juros:"+"</font>");
+                out.println("</td>");
+                out.println("<td>");
+                out.println("<font size='5px'>"+"Montante:"+"</font>");
+                out.println("</td>");
+
                 
                 for ( i = 1; i <= time; i++) {
                     out.println("<tr>");
+                    out.println("<td>"+i+"º"+"</td>");
                 montante =cap*Math.pow((1+tax),control);
                 juroscomp = montante - cap;
                 ganho = cap + juroscomp;
+                out.println("<td>"+cap+"</td>");
+                out.println("<td>"+juroscomp+"</td>");
                 out.println("<td>"+ganho+"</td>");
                     out.println("</tr>");
-                
                 cap=ganho;
                 control = control + 1;
                 }
@@ -142,7 +151,7 @@ public class JuroscompostoServlet extends HttpServlet {
             
             
             out.println("<style>");
-            out.println("table,th,td{border:1px solid black;}");
+            out.println("table,th,td{border:3px solid black;}");
             out.println("</style>");
             
             out.println("</form>");
