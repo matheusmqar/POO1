@@ -64,9 +64,9 @@ public class HomeServlet extends HttpServlet {
             out.println("</nav>");
             
             out.println("<div class=\"container-fluid\">");
-            out.println("<h1 class=\"text-center\">BEM VINDO</h1>");
+            out.println("<h1 class=\"text-center\">1° Projeto - POO </h1>");
+            out.println("<h2 class=\"text-center\">Seja Bem-vindo!</h2>");
             out.println("<p class=\"text-center\">Aqui você encontra nossas ferramentas de cálculo de juros simples e juros composto de maneira fácil e rápida</p>");
-           
             out.println("<div class=\"row\">");
             out.println("<div class=\"col-md-6\">");
             out.println("<div class=\"panel panel-default\">");
@@ -98,9 +98,9 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">ALAN DA SILVA</div>");
+            out.println("<a href='https://github.com/AlanMont' target=\"_blank\"><img src='images/giticon.png' style='margin-left:30%' /></a>");
             out.println("</div>");
             out.println("</div>");
-            
             out.println("<div class=\"col-xs-6 col-md-2\">");
             out.println("<div class=\"panel panel-default\">");
             out.println("<div class=\"panel-body\" style='padding:0'>");
@@ -108,6 +108,7 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">ANDRÉ LUIZ</div>");
+            out.println("<a href='https://github.com/Andre-ti-dev' target=\"_blank\"><img src='images/giticon.png' style='margin-left:30%' /></a>");
             out.println("</div>");
             out.println("</div>");
             
@@ -118,6 +119,7 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">MATHEUS CORTEZ</div>");
+            out.println("<a href='https://github.com/matheus-cortez99' target=\"_blank\"><img src='images/giticon.png' style='margin-left:30%' /></a>"); 
             out.println("</div>");
             out.println("</div>");
             
@@ -128,6 +130,7 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">MATHEUS MARQUES</div>");
+            out.println("<a href='https://github.com/matheusmqar' target=\"_blank\"><img src='images/giticon.png' style='margin-left:30%' /></a>");
             out.println("</div>");
             out.println("</div>");
             
@@ -138,6 +141,7 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">RAFAEL TEIXEIRA</div>");
+            out.println("<a href='https://github.com/RafaelTeixeiraMiguel' target=\"_blank\"><img src='images/giticon.png' style='margin-left:30%' /></a>");
             out.println("</div>");
             out.println("</div>");
             out.println("</div>");
