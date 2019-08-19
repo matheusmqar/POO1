@@ -94,6 +94,16 @@ public class HomeServlet extends HttpServlet {
             out.println("<div class=\"col-xs-6 col-md-2\">");
             out.println("<div class=\"panel panel-default\">");
             out.println("<div class=\"panel-body\" style='padding:0'>");
+            out.println("<img src='images/5.png' style='width:100%'");
+            out.println("</div>");
+            out.println("</div>");
+            out.println("<div class=\"panel-footer text-center\">ALAN DA SILVA</div>");
+            out.println("</div>");
+            out.println("</div>");
+            
+            out.println("<div class=\"col-xs-6 col-md-2\">");
+            out.println("<div class=\"panel panel-default\">");
+            out.println("<div class=\"panel-body\" style='padding:0'>");
             out.println("<img src='images/1.jpg' style='width:100%'");
             out.println("</div>");
             out.println("</div>");
@@ -128,16 +138,6 @@ public class HomeServlet extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("<div class=\"panel-footer text-center\">RAFAEL TEIXEIRA</div>");
-            out.println("</div>");
-            out.println("</div>");
-            
-            out.println("<div class=\"col-xs-6 col-md-2\">");
-            out.println("<div class=\"panel panel-default\">");
-            out.println("<div class=\"panel-body\" style='padding:0'>");
-            out.println("<img src='images/5.png' style='width:100%'");
-            out.println("</div>");
-            out.println("</div>");
-            out.println("<div class=\"panel-footer text-center\">ALAN DA SILVA</div>");
             out.println("</div>");
             out.println("</div>");
             out.println("</div>");
